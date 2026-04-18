@@ -180,13 +180,9 @@ def _sniff_mime(head: bytes, filename: str) -> str | None:
         if ext == ".docx":
             return _DOCX_MIME
         if ext == ".xlsx":
-            return (
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
+            return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         if ext == ".pptx":
-            return (
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-            )
+            return "application/vnd.openxmlformats-officedocument.presentationml.presentation"
         return "application/zip"
     if _looks_like_text(head):
         return "text/plain"

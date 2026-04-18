@@ -1,6 +1,8 @@
 <h1 align="center">pypresscart — A Python Library for the Presscart API</h1>
 
 <p align="center">
+  <a href="https://github.com/annjawn/py-presscart/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/annjawn/py-presscart/ci.yml?branch=main&label=CI"></a>
+  <a href="https://annjawn.github.io/py-presscart/"><img alt="Docs" src="https://img.shields.io/github/actions/workflow/status/annjawn/py-presscart/docs.yml?branch=main&label=docs"></a>
   <a href="https://pypi.org/project/pypresscart/"><img alt="PyPI" src="https://img.shields.io/pypi/v/pypresscart.svg"></a>
   <a href="https://pypi.org/project/pypresscart/"><img alt="Python" src="https://img.shields.io/pypi/pyversions/pypresscart.svg"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
@@ -8,7 +10,6 @@
   <a href="https://mypy-lang.org/"><img alt="Checked with mypy" src="https://www.mypy-lang.org/static/mypy_badge.svg"></a>
   <a href="https://docs.pydantic.dev/"><img alt="Types - Pydantic" src="https://img.shields.io/badge/types-pydantic-E92063.svg"></a>
   <a href="https://pre-commit.com/"><img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit"></a>
-  <a href="https://annjawn.github.io/py-presscart/"><img alt="Docs" src="https://img.shields.io/github/actions/workflow/status/annjawn/py-presscart/docs.yml?label=docs"></a>
 </p>
 
 <p align="center">

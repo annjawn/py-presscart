@@ -1,0 +1,108 @@
+name: Release
+
+# Manual-only, by design. Publishing to PyPI is an irreversible action, so we
+# don't auto-trigger on tags. To release:
+#   1. Bump src/pypresscart/_version.py AND pyproject.toml
+#   2. Commit + push to main, wait for CI (ci.yml) to go green
+#   3. Run this workflow via "Actions → Release → Run workflow", pick target
+#   4. (First time) create a git tag vX.Y.Z manually and push it
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Where to publish"
+        type: choice
+        required: true
+        default: testpypi
+        options:
+          - testpypi
+          - pypi
+
+permissions:
+  contents: read
+  id-token: write # OIDC — trusted publishing to PyPI / TestPyPI
+
+concurrency:
+  group: release-${{ inputs.target }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build + validate distributions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install 3.12
+
+      - name: Install dev dependencies
+        run: uv sync --group dev
+
+      - name: Verify (ruff + mypy + pytest)
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run mypy src
+          uv run pytest -q
+
+      - name: Build sdist + wheel
+        run: uv build
+
+      - name: Validate with twine
+        run: uv run --no-project --with twine twine check dist/*
+
+      - name: Upload distributions
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  publish-testpypi:
+    name: Publish → TestPyPI
+    if: inputs.target == 'testpypi'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/project/pypresscart/
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          print-hash: true
+          skip-existing: true
+
+  publish-pypi:
+    name: Publish → PyPI
+    if: inputs.target == 'pypi'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/pypresscart/
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          print-hash: true
