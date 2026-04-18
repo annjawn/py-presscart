@@ -63,6 +63,10 @@ Returns a full `Campaign` including nested `profile` and `questionnaire`.
 
 ### `create`
 
+:::{warning}
+**Not yet exercised against the live API** — creates persistent campaign data. See [Testing status](testing-status.md).
+:::
+
 ```python
 def create(
     body: CampaignCreateRequest | BaseModel | dict,
@@ -110,6 +114,10 @@ campaign = client.campaigns.create(
 ---
 
 ### `update`
+
+:::{warning}
+**Not yet exercised against the live API** — mutates an existing campaign on the live dashboard. See [Testing status](testing-status.md).
+:::
 
 ```python
 def update(
@@ -172,6 +180,10 @@ def article_status_counts(
 
 Attach existing order items to a campaign.
 
+:::{warning}
+**Not yet exercised against the live API** — mutates campaign-to-order-item associations. See [Testing status](testing-status.md).
+:::
+
 ```python
 def assign_order_items(
     campaign_id: str,
@@ -199,6 +211,10 @@ client.campaigns.assign_order_items(
 ### `link_questionnaire`
 
 Link an uploaded file to the campaign's questionnaire (for writing samples, brand guides, etc.).
+
+:::{warning}
+**Not yet exercised against the live API** — mutates questionnaire state. See [Testing status](testing-status.md).
+:::
 
 ```python
 def link_questionnaire(

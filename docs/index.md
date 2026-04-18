@@ -53,6 +53,7 @@ resource-folders
 api-reference
 models-reference
 recipes
+testing-status
 contributing
 changelog
 ```

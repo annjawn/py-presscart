@@ -69,6 +69,10 @@ for li in order.line_items:
 
 Create a checkout order. If the order isn't already paid, the response includes a shareable `checkout_link` for guest payment.
 
+:::{warning}
+**Not yet exercised against the live API** — this creates a real order and initiates billing. See [Testing status](testing-status.md).
+:::
+
 ```python
 def create_checkout(
     body: CheckoutRequest | BaseModel | dict,
