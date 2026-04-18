@@ -4,6 +4,15 @@ All notable changes to `pypresscart` are recorded here. This project follows [Se
 
 ## [Unreleased]
 
+## [0.1.3] — 2026-04-18
+
+### Fixed
+- `OutletChannel.do_follow_links_allowed` now accepts string values (e.g.
+  `"Unlimited"`) in addition to `bool`/`null`. The Presscart API returns a
+  capacity string here on some outlet channels even though the docs type it
+  as a boolean, which was causing `GET /outlets/{id}` to raise a Pydantic
+  `ValidationError` whenever one of those channels appeared in the response.
+
 ## [0.1.2] — 2026-04-18
 
 ### Fixed
@@ -41,7 +50,8 @@ Initial public release.
 - Runtime: `pydantic>=2.7,<3`, `requests>=2.31,<3`.
 - Python 3.10+.
 
-[Unreleased]: https://github.com/pypresscart/py-presscart/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/pypresscart/py-presscart/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/pypresscart/py-presscart/releases/tag/v0.1.3
 [0.1.2]: https://github.com/pypresscart/py-presscart/releases/tag/v0.1.2
 [0.1.1]: https://github.com/pypresscart/py-presscart/releases/tag/v0.1.1
 [0.1.0]: https://github.com/pypresscart/py-presscart/releases/tag/v0.1.0

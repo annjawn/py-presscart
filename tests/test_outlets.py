@@ -48,6 +48,30 @@ def test_get_outlet(mocked: responses.RequestsMock, client: PresscartClient) -> 
     assert outlet.name == "Ink"
 
 
+def test_get_outlet_accepts_string_do_follow_links_allowed(
+    mocked: responses.RequestsMock, client: PresscartClient
+) -> None:
+    mocked.add(
+        responses.GET,
+        f"{BASE_URL}/outlets/out_1",
+        json={
+            "id": "out_1",
+            "name": "Ink",
+            "tags": [],
+            "outlet_channels": [
+                {
+                    "id": "chan_1",
+                    "channel_type": "WEBSITE",
+                    "do_follow_links_allowed": "Unlimited",
+                }
+            ],
+        },
+    )
+    outlet = client.outlets.get("out_1")
+    assert isinstance(outlet, Outlet)
+    assert outlet.outlet_channels[0].do_follow_links_allowed == "Unlimited"
+
+
 def test_list_countries(mocked: responses.RequestsMock, client: PresscartClient) -> None:
     mocked.add(
         responses.GET,

@@ -38,7 +38,7 @@ class OutletChannel(PresscartModel):
     is_do_follow: bool | None = None
     domain_authority: int | None = None
     domain_ranking: int | None = None
-    do_follow_links_allowed: bool | None = None
+    do_follow_links_allowed: bool | str | None = None
     disclaimer_name: str | None = None
     disclaimer_description: str | None = None
 
