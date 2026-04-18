@@ -133,7 +133,7 @@ html_last_updated_fmt = "%Y-%m-%d"
 
 html_context = {
     "source_type": "github",
-    "source_user": "annjawn",
+    "source_user": "pypresscart",
     "source_repo": "py-presscart",
     "source_version": "main",
     "source_docs_path": "/docs/",
@@ -141,10 +141,10 @@ html_context = {
 
 html_theme_options: dict = {
     "accent_color": "iris",
-    "github_url": "https://github.com/annjawn/py-presscart",
+    "github_url": "https://github.com/pypresscart/py-presscart",
     "nav_links": [
         {"title": "PyPI", "url": "https://pypi.org/project/pypresscart/"},
-        {"title": "Source", "url": "https://github.com/annjawn/py-presscart"},
+        {"title": "Source", "url": "https://github.com/pypresscart/py-presscart"},
         {"title": "API", "url": "https://docs.presscart.com"},
     ],
 }

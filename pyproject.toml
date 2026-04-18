@@ -32,8 +32,8 @@ dependencies = [
 
 [project.urls]
 Documentation = "https://docs.presscart.com"
-Issues = "https://github.com/annjawn/py-presscart/issues"
-Source = "https://github.com/annjawn/py-presscart"
+Issues = "https://github.com/pypresscart/py-presscart/issues"
+Source = "https://github.com/pypresscart/py-presscart"
 
 [dependency-groups]
 dev = [

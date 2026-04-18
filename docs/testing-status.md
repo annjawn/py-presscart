@@ -59,7 +59,7 @@ Download bytes are verified to match the uploaded file **SHA-256 for SHA-256** b
 
 | Resource | Method | Endpoint | Status |
 |---|---|---|---|
-| Articles | `get` | `GET /articles/{article_id}` | Server returns **403** to `full_access` tokens. See [issue #8](https://github.com/annjawn/py-presscart/issues/8). |
+| Articles | `get` | `GET /articles/{article_id}` | Server returns **403** to `full_access` tokens. See [issue #8](https://github.com/pypresscart/py-presscart/issues/8). |
 
 Because `articles.get()` is the only way to fetch a single article's full detail (brief URL, draft URL, writer, etc.), the **Articles write endpoints below are effectively gated behind this fix**. They're wired up and type-checked, but you can't realistically use them today without first resolving issue #8 on the server side.
 

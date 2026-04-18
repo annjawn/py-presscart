@@ -1,8 +1,8 @@
 <h1 align="center">pypresscart — A Python Library for the Presscart API</h1>
 
 <p align="center">
-  <a href="https://github.com/annjawn/py-presscart/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/annjawn/py-presscart/ci.yml?branch=main&label=CI"></a>
-  <a href="https://annjawn.github.io/py-presscart/"><img alt="Docs" src="https://img.shields.io/github/actions/workflow/status/annjawn/py-presscart/docs.yml?branch=main&label=docs"></a>
+  <a href="https://github.com/pypresscart/py-presscart/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/pypresscart/py-presscart/ci.yml?branch=main&label=CI"></a>
+  <a href="https://annjawn.github.io/py-presscart/"><img alt="Docs" src="https://img.shields.io/github/actions/workflow/status/pypresscart/py-presscart/docs.yml?branch=main&label=docs"></a>
   <a href="https://pypi.org/project/pypresscart/"><img alt="PyPI" src="https://img.shields.io/pypi/v/pypresscart.svg"></a>
   <a href="https://pypi.org/project/pypresscart/"><img alt="Python" src="https://img.shields.io/pypi/pyversions/pypresscart.svg"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
@@ -17,7 +17,7 @@
   ·
   <a href="https://pypi.org/project/pypresscart/">PyPI</a>
   ·
-  <a href="https://github.com/annjawn/py-presscart/issues">Issues</a>
+  <a href="https://github.com/pypresscart/py-presscart/issues">Issues</a>
 </p>
 
 > ⚠️ **Unofficial library.** This project is not affiliated with, endorsed by, or supported by Presscart. It's a community-maintained Python client for the [Presscart API](https://docs.presscart.com).

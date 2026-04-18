@@ -12,7 +12,7 @@ Thanks for helping improve `pypresscart`.
 ## Local setup
 
 ```bash
-git clone https://github.com/annjawn/py-presscart.git
+git clone https://github.com/pypresscart/py-presscart.git
 cd py-presscart
 uv sync --group dev
 ```

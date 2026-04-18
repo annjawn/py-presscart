@@ -22,5 +22,5 @@ Initial public release.
 - Runtime: `pydantic>=2.7,<3`, `requests>=2.31,<3`.
 - Python 3.10+.
 
-[Unreleased]: https://github.com/annjawn/py-presscart/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/annjawn/py-presscart/releases/tag/v0.1.0
+[Unreleased]: https://github.com/pypresscart/py-presscart/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/pypresscart/py-presscart/releases/tag/v0.1.0
