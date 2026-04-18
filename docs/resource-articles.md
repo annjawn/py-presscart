@@ -7,7 +7,7 @@ client.articles  # ArticlesResource
 ```
 
 :::{warning}
-**The entire Articles resource is currently blocked upstream.** `GET /articles/{article_id}` returns `403 Insufficient permissions` to `full_access` API tokens, and since the write endpoints need the article's current state before you can safely change it, none of these methods can be exercised end-to-end until the server-side issue is resolved. See [Testing status](testing-status.md) and [issue #8](https://github.com/annjawn/py-presscart/issues/8).
+**The entire Articles resource is currently blocked upstream.** `GET /articles/{article_id}` returns `403 Insufficient permissions` to `full_access` API tokens, and since the write endpoints need the article's current state before you can safely change it, none of these methods can be exercised end-to-end until the server-side issue is resolved. See [Testing status](testing-status.md) and [issue #8](https://github.com/pypresscart/py-presscart/issues/8).
 :::
 
 ## Methods overview
@@ -24,7 +24,7 @@ client.articles  # ArticlesResource
 ### `get`
 
 :::{error}
-**Currently returns 403** for `full_access` API tokens — [issue #8](https://github.com/annjawn/py-presscart/issues/8).
+**Currently returns 403** for `full_access` API tokens — [issue #8](https://github.com/pypresscart/py-presscart/issues/8).
 :::
 
 ```python

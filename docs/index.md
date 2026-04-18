@@ -117,6 +117,6 @@ End-to-end workflows: campaign setup, pagination, FastAPI wiring, more.
 ## Links
 
 - **PyPI**: <https://pypi.org/project/pypresscart/>
-- **Source**: <https://github.com/annjawn/py-presscart>
-- **Issues**: <https://github.com/annjawn/py-presscart/issues>
+- **Source**: <https://github.com/pypresscart/py-presscart>
+- **Issues**: <https://github.com/pypresscart/py-presscart/issues>
 - **Upstream API docs**: <https://docs.presscart.com>
